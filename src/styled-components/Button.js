@@ -21,3 +21,15 @@ export const StyledButton = styled.button`
 export const FancyButton = styled(StyledButton)`
 	background-image: linear-gradient(to right, white, black);
 `;
+
+export const SubmitButton = styled(StyledButton).attrs({
+	type: 'submit',
+})`
+	box-shadow: 0 9px #999;
+	
+	&:active {
+    background-color: ${ (props) => (props.variant !== 'outline' ? 'white' : '#4caf50') };
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
+	}
+`;
